@@ -1,0 +1,19 @@
+section#audi{
+    background: aliceblue;
+    border-radius: 10px;
+    padding: 15px;
+    width: auto;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.404) ;
+}
+
+section#ger{
+    background: aliceblue;
+    border-radius: 10px;
+    padding: 15px;
+    width: auto;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.404) ;
+}
