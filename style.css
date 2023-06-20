@@ -6,10 +6,8 @@
 .color-theme__119721338_gettyimages-113494602-5-hex { color: #99B7F9; }
 */
 
+@charset 'UTF-8';
 
-
-
-@charset 'utf-8';
 
 body{
     background-color: #131A40;
@@ -17,35 +15,47 @@ body{
     font-size: 1em;
 }
 
-section#geral{
-    margin: auto auto auto auto;
+
+header{
+    text-align: center;
+    background-color: aliceblue;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 15px;
+    border: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.404)
 }
 
-section{
+.cabeca{
     display: inline-block;
+    margin: 10px;
+
 }
 
 .eventos{
-    background: aliceblue;
+    display: inline-block;
+    margin: 10px auto 10px auto;
+    background: #4E64A6;
     border-radius: 10px;
     padding: 15px;
     max-height: 300px;
-    max-width: 500px;
+    max-width: 450px;
     border: 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.404);
 
     text-align: justify;
     font-size: 1.2em;
+    color: black;
 }
-
 section > h1{
     font-size: 2em;
     text-align: center;
     background: #99B7F9;
     color: #131A40;
+    margin: auto;
 
     max-width: 300px;
-    margin: auto;
     border-radius: 10px;
     padding: 15px;
     max-height: 300px;
