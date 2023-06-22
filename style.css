@@ -177,7 +177,7 @@ section#colaboradores{
     border: 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.404);
 
-    text-align: justify;
+    text-align: left;
     font-size: 1.2em;
     color: #1f1f1f;
 }
