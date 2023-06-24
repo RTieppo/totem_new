@@ -60,6 +60,10 @@ section#colaboradores{
     justify-content: center;
 }
 
+.imgajust{
+    border-radius: 5px;
+}
+
 .nometi{
     padding: 5px;
     margin: 0px;
