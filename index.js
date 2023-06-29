@@ -5,5 +5,5 @@
 
     console.log('SELECT * FROM EMOJI');
     const clientes = await db.selectCustomers();
-    console.log(clientes);
+    console.log(clientes[0][0][0]);
 })();
