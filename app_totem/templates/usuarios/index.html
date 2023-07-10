@@ -1,0 +1,115 @@
+{% load custom_tags %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Totem</title>
+    <link rel="shortcut icon" href="{% static "imgs\favicon.ico" %} type="image/x-icon">
+</head>
+
+<link rel="stylesheet" href="{% static "css\style.css" %}">
+
+<body>
+
+    <header>
+        <section class="ajusteseceventos">
+        <h1 class="titleeventos">Eventos auditório</h1>
+        {% for evento_a in eventos_au %}
+            <p class="eventos">{{ evento_a.dia }} - {{ evento_a.texto }}</p>
+        {% empty %}
+            <p class="eventos">Nenhum evento encontrado.</p>
+        {% endfor %}
+        </section>
+
+        <section  class="ajusteseceventos">
+            <h1 class="titleeventos">Eventos gerais</h1>
+            {% for evento_g in eventos_ge %}
+            <p class="eventos">{{ evento_g.dia }} - {{ evento_g.texto }}</p>
+            {% empty %}
+            <p class="eventos">Nenhum evento encontrado.</p>
+            {% endfor %}
+        </section>
+    </header>
+
+    <main>
+
+        {% if avisos %}
+        <section id="avisos">
+            
+            <h1 class="avisostitle">Avisos!</h1>
+            {%for aviso in avisos%}
+            <p class= "avisos">{{aviso.texto}}</p>
+            {% endfor %}
+
+        </section>
+        {% endif %}
+
+        <section id="ti">
+            <h1 class="titleti">Equipe TI</h1>
+
+            <section id="colaboradores">
+                {%for status in status_atendimento %}
+                <section class="ajustecolaboradores">
+                        <section class="basesuperior">
+                            <h2 class="nometi">{{status.nome}}</h2>
+                            
+                            {% if status.status_agora == "Ferias" %}
+                                {% imp_links 1 %}
+                                <img src="{% static "imgs\Ferias.png" %}" alt="Ferias"/>
+                            {%elif status.status_agora == "Intervalo" %}
+                                {% imp_links 1 %}    
+                                <img src="{% static "imgs\intervalo.png" %}" alt="intervalo"/>
+                            
+                            {% elif status.horario == "Saida"%}
+                                {% imp_links 1 %}    
+                                <img src="{% static "imgs\descanso.png" %}" alt="intervalo"/>
+
+                            {% else %}
+                                <img class="imgajust" src="{% imp_links %}" alt="image host" />
+                            {% endif %}
+
+                            {% if status.status_agora == "Ferias" %}
+                                <p class="pstatus">Férias</p>
+                            {% elif status.status_agora == "Intervalo" %}
+                                <p class="pstatus">Intervalo</p>
+                            
+                            {% elif status.horario == "Saida"%}
+                                <p class="pstatus">Descansando</p>
+
+                            {% else %}
+                                <p class="pstatus">{{status.humor}}</p>
+                            {% endif %}
+
+                        </section>
+
+                        {% if status.status_agora == "Intervalo" %}
+                            
+                        {% elif status.horario == "Entrada" %}
+                            <section class="baseinferior">
+                                <p class="pstatus">{{status.status_agora}}</p>
+                                <p class="pstatus">{{status.local_ss}}</p>
+                            </section>
+                            
+                            
+                        {% endif %}
+
+                </section>
+                {%endfor%}
+                {% imp_links 0 %}
+
+            </section>
+            
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy;Rtieppo</p>
+    </footer>
+</body>
+</html>
