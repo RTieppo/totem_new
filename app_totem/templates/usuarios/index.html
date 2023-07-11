@@ -20,7 +20,11 @@
         <section class="ajusteseceventos">
         <h1 class="titleeventos">Eventos auditório</h1>
         {% for evento_a in eventos_au %}
-            <p class="eventos">{{ evento_a.dia }} - {{ evento_a.texto }}</p>
+            <section class="eventos">
+            <p class="elementosp">{{ evento_a.dia }}</p>
+            <hr class="elementosp">
+            <p class="elementosp">{{ evento_a.texto }}</p>
+            </section>
         {% empty %}
             <p class="eventos">Nenhum evento encontrado.</p>
         {% endfor %}
@@ -29,7 +33,11 @@
         <section  class="ajusteseceventos">
             <h1 class="titleeventos">Eventos gerais</h1>
             {% for evento_g in eventos_ge %}
-            <p class="eventos">{{ evento_g.dia }} - {{ evento_g.texto }}</p>
+                <section class="eventos">
+                    <p class="elementosp">{{ evento_a.dia }}</p>
+                    <hr class="elementosp">
+                    <p class="elementosp">{{ evento_a.texto }}</p>
+                </section>
             {% empty %}
             <p class="eventos">Nenhum evento encontrado.</p>
             {% endfor %}

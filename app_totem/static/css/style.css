@@ -175,15 +175,20 @@ section#colaboradores{
     background: #f0f8ff;
     margin: 10px auto;
     border-radius: 10px;
-    padding: 15px;
+    padding: 8px;
     max-height: 300px;
     max-width: 450px;
     border: 5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.404);
 
-    text-align: left;
+    text-align: center;
     font-size: 1.2em;
     color: #1f1f1f;
+}
+
+.elementosp{
+    margin: 0;
+    padding: 1;
 }
 
 .ajustecolaboradores{
