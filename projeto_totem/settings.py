@@ -75,9 +75,9 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "painel_digital",
-        "USER": "root",
-        "PASSWORD": "root",
-        "HOST": "localhost",
+        "USER": "expositor",
+        "PASSWORD": "expositor",
+        "HOST": "10.10.103.239",
         "PORT": "3306",
         "OPTIONS": {
             "charset": "utf8mb4",
