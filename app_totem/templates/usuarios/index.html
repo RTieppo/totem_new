@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="5">
     <title>Totem</title>
-    <link rel="shortcut icon" href="{% static "imgs\favicon.ico" %} type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'imgs\favicon.ico' %}" type="image/x-icon">
 </head>
 
 <link rel="stylesheet" href="{% static "css\style.css" %}">
@@ -21,9 +21,9 @@
         <h1 class="titleeventos">Eventos auditório</h1>
         {% for evento_a in eventos_au %}
             <section class="eventos">
-            <p class="elementosp">{{ evento_a.dia }}</p>
-            <hr class="elementosp">
-            <p class="elementosp">{{ evento_a.texto }}</p>
+                <p class="elementosp">{{ evento_a.dia }}</p>
+                <hr class="elementosp">
+                <p class="elementosp">{{ evento_a.texto }}</p>
             </section>
         {% empty %}
             <p class="eventos">Nenhum evento encontrado.</p>
@@ -68,14 +68,14 @@
                             
                             {% if status.status_agora == "Ferias" %}
                                 {% imp_links 1 %}
-                                <img src="{% static "imgs\Ferias.png" %}" alt="Ferias"/>
+                                <img src="{% static 'imgs\Ferias.png' %}" alt="Ferias"/>
                             {%elif status.status_agora == "Intervalo" %}
                                 {% imp_links 1 %}    
-                                <img src="{% static "imgs\intervalo.png" %}" alt="intervalo"/>
+                                <img src="{% static 'imgs\intervalo.png' %}" alt="intervalo"/>
                             
                             {% elif status.horario == "Saida"%}
                                 {% imp_links 1 %}    
-                                <img src="{% static "imgs\descanso.png" %}" alt="intervalo"/>
+                                <img src="{% static 'imgs\descanso.png' %}" alt="intervalo"/>
 
                             {% else %}
                                 <img class="imgajust" src="{% imp_links %}" alt="image host" />
