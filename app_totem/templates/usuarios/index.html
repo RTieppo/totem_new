@@ -34,9 +34,9 @@
             <h1 class="titleeventos">Eventos gerais</h1>
             {% for evento_g in eventos_ge %}
                 <section class="eventos">
-                    <p class="elementosp">{{ evento_a.dia }}</p>
+                    <p class="elementosp">{{ evento_g.dia }}</p>
                     <hr class="elementosp">
-                    <p class="elementosp">{{ evento_a.texto }}</p>
+                    <p class="elementosp">{{ evento_g.texto }}</p>
                 </section>
             {% empty %}
             <p class="eventos">Nenhum evento encontrado.</p>
